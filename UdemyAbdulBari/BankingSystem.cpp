@@ -228,3 +228,8 @@ Account Bank::Deposit(long accountNumber, float amount)
 	itr->second.Deposit(amount);
 	return itr->second;
 }
+Account Bank::Withdraw(long accountNumber, float amount)
+{
+	map<long, Account>::iterator itr = accounts.find(accountNumber);
+	return itr->second;
+}
