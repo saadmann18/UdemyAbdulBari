@@ -140,3 +140,7 @@ Account::Account(string fname, string lname, float balance)
 	lastName = lname;
 	this->balance = balance;
 }
+void Account::Deposit(float amount)
+{
+	balance += amount;
+}
