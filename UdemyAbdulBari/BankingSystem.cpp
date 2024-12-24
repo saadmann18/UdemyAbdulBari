@@ -158,11 +158,19 @@ long Account::getLastAccountNumber()
 {
 	return NextAccountNumber;
 }
-ofstream& operator <<(ofstream& ofs, Account& acc)
+ofstream& operator<<(ofstream& ofs, Account& acc)
 {
 	ofs << acc.accountNumber << endl;
 	ofs << acc.firstName << endl;
 	ofs << acc.lastName << endl;
 	ofs << acc.balance << endl;
 	return ofs;
+}
+ifstream& operator>>(ifstream& ifs, Account& acc)
+{
+	ifs >> acc.accountNumber;
+	ifs >> acc.firstName;
+	ifs >> acc.lastName;
+	ifs >> acc.balance;
+	return ifs;
 }
