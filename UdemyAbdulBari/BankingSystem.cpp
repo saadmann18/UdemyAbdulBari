@@ -233,3 +233,9 @@ Account Bank::Withdraw(long accountNumber, float amount)
 	map<long, Account>::iterator itr = accounts.find(accountNumber);
 	return itr->second;
 }
+void Bank::CloseAccount(long accountNumber)
+{
+	map<long, Account>::iterator itr = accounts.find(accountNumber);
+	cout << "Account Deleted" << itr->second;
+	accounts.erase(accountNumber);
+}
