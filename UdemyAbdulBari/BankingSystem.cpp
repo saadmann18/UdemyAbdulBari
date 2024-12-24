@@ -146,7 +146,7 @@ void Account::Deposit(float amount)
 }
 void Account::Withdraw(float amount)
 {
-	if (balance - amount < MIN_BALANCE)
+	if (balance - amount < MIN_BALANCE )
 		throw InsufficientFunds();
 	balance -= amount;
 }
@@ -220,5 +220,11 @@ Account Bank::OpenAccount(string fname, string lname, float balance)
 Account Bank::BalanceEnquiry(long accountNumber)
 {
 	map<long, Account>::iterator itr = accounts.find(accountNumber);
+	return itr->second;
+}
+Account Bank::Deposit(long accountNumber, float amount)
+{
+	map<long, Account>::iterator itr = accounts.find(accountNumber);
+	itr->second.Deposit(amount);
 	return itr->second;
 }
