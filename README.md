@@ -1,0 +1,1 @@
+This repository contains the course material and practice sheets for the course named: "Classroom and Hands-on sessions- Features of C++ 11 , Exception Handling and STL - for Both Academics and Industry".
