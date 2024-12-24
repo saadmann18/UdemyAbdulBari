@@ -150,3 +150,7 @@ void Account::Withdraw(float amount)
 		throw InsufficientFunds();
 	balance -= amount;
 }
+void Account::setLastAccountNumber(long accountNumber)
+{
+	NextAccountNumber = accountNumber;
+}
