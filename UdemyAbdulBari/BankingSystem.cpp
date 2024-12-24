@@ -5,7 +5,7 @@
 #include <map>
 
 using namespace std;
-#define MIN_BALANCE 500;
+#define MIN_BALANCE 500
 class InsufficientFunds{};
 
 class Account
@@ -30,7 +30,7 @@ public:
 	static void setLastAccountNumber(long accountNumber);
 	static long getLastAccountNumber();
 	friend ofstream& operator<<(ofstream& ofs, Account& acc);
-	friend ofstream& operator<<(ofstream& ofs, Account& acc);
+	friend ifstream& operator>>(ifstream& ifs, Account& acc);
 	friend ostream& operator<<(ostream& os, Account& acc);
 };
 long Account::NextAccountNumber = 0;
