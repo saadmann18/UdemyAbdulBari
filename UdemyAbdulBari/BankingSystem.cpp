@@ -97,7 +97,7 @@ int main()
 		case 3:
 			cout << "Enter Account Number: ";
 			cin >> accountNumber;
-			cout << "Enter Balance:	";
+			cout << "Enter New deposit amoung:	";
 			cin >> amount;
 			acc = b.Deposit(accountNumber, amount);
 			cout << endl << "Amount is Deposited" << endl;
@@ -106,7 +106,7 @@ int main()
 		case 4:
 			cout << "Enter Account Number: ";
 			cin >> accountNumber;
-			cout << "Enter Balance: ";
+			cout << "Enter withdrawal amount: ";
 			cin >> amount;
 			acc = b.Withdraw(accountNumber, amount);
 			cout << endl << "Amount Withdrawn" << endl;
@@ -231,6 +231,7 @@ Account Bank::Deposit(long accountNumber, float amount)
 Account Bank::Withdraw(long accountNumber, float amount)
 {
 	map<long, Account>::iterator itr = accounts.find(accountNumber);
+	itr->second.Withdraw(amount);
 	return itr->second;
 }
 void Bank::CloseAccount(long accountNumber)
