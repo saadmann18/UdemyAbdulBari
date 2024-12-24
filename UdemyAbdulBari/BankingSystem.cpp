@@ -154,3 +154,7 @@ void Account::setLastAccountNumber(long accountNumber)
 {
 	NextAccountNumber = accountNumber;
 }
+long Account::getLastAccountNumber()
+{
+	return NextAccountNumber;
+}
