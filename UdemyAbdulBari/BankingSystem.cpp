@@ -239,3 +239,11 @@ void Bank::CloseAccount(long accountNumber)
 	cout << "Account Deleted" << itr->second;
 	accounts.erase(accountNumber);
 }
+void Bank::ShowAllAccounts()
+{
+	map<long, Account>::iterator itr;
+	for (itr = accounts.begin(); itr != accounts.end(); itr++)
+	{
+		cout << "Account " << itr->first << endl << itr->second << endl;
+	}
+}
