@@ -88,7 +88,7 @@ int main()
 			cout << acc;
 			break;
 		case 2:
-			cout << "Enter First Number: ";
+			cout << "Enter Account Number: ";
 			cin >> accountNumber;
 			acc = b.BalanceEnquiry(accountNumber);
 			cout << endl << "Your Account Details" << endl;
