@@ -217,3 +217,8 @@ Account Bank::OpenAccount(string fname, string lname, float balance)
 	outfile.close();
 	return account;
 }
+Account Bank::BalanceEnquiry(long accountNumber)
+{
+	map<long, Account>::iterator itr = accounts.find(accountNumber);
+	return itr->second;
+}
