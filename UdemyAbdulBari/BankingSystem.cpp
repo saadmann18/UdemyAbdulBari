@@ -144,3 +144,9 @@ void Account::Deposit(float amount)
 {
 	balance += amount;
 }
+void Account::Withdraw(float amount)
+{
+	if (balance - amount < MIN_BALANCE)
+		throw InsufficientFunds();
+	balance -= amount;
+}
