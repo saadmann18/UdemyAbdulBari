@@ -174,3 +174,11 @@ ifstream& operator>>(ifstream& ifs, Account& acc)
 	ifs >> acc.balance;
 	return ifs;
 }
+ostream& operator<<(ostream& os, Account& acc)
+{
+	os << "First Name: " << acc.getFirstName() << endl;
+	os << "Last Name: " << acc.getLastName() << endl;
+	os << "Account Number: " << acc.getAccNo() << endl;
+	os << "Balance: " << acc.getBalance() << endl;
+	return os;
+}
