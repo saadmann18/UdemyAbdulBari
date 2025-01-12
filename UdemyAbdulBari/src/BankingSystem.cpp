@@ -17,7 +17,7 @@ private:
 	float balance;
 	static long NextAccountNumber;
 public:
-	Account(){}
+	Account() {};
 	Account(string fname, string lname, float balance);
 	
 	long getAccNo() { return accountNumber; };
@@ -97,7 +97,7 @@ int main()
 		case 3:
 			cout << "Enter Account Number: ";
 			cin >> accountNumber;
-			cout << "Enter New deposit amoung:	";
+			cout << "Enter New deposit amount:	";
 			cin >> amount;
 			acc = b.Deposit(accountNumber, amount);
 			cout << endl << "Amount is Deposited" << endl;

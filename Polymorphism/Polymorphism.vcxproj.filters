@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\BankingSystem.cpp">
+    <ClCompile Include="Polymorphism.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
